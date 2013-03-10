@@ -1,0 +1,38 @@
+{% include 'header.html' %}
+<div class="container" id="content" >
+    <h1><font color="purple" size = "11"><b><u>Blog</u></b></font></h1>
+    <hr />
+ <div class="main">
+ <ul>
+    {% for post in posts.object_list %}
+        <div class="post">
+        <div class="title"><h2>{{ post.title }}</h2></div>
+        <h3>Written by {{ post.author.name }} on {{post.date}}</h3>
+        <p>{{ post.body|linebreaks }}</p>
+        
+        </div>
+<div class="commentlink"><a href="{% url blog.views.post post.pk %}">Comments ({{ post.comment_set.count }})</a></div>
+<hr />
+    {% endfor %}
+</ul>
+<!-- Next/Prev page links  -->
+{% if posts.object_list and posts.paginator.num_pages > 1 %}
+    <div class="pagination" style="margin-top: 20px; margin-left: 20px; ">
+       <span class="step-links">
+            {% if posts.has_previous %}
+              <a href= "?page={{ posts.previous_page_number }}">previous &lt;&lt; </a>
+            {% endif %}
+
+            <span class="current">
+              &nbsp;Page {{ posts.number }} of {{ posts.paginator.num_pages }}
+            </span>
+
+            {% if posts.has_next %}
+              <a href="?page={{ posts.next_page_number }}"> &gt;&gt; next</a>
+            {% endif %}
+       </span>
+     </div>
+  {% endif %}
+</div>
+</div>
+{% include 'footer.html' %}

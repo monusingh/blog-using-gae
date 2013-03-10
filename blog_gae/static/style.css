@@ -1,0 +1,84 @@
+
+body {
+  margin-left: 15%;
+  margin-right: 15%;  
+  font-family: sans-serif, Arial;
+  background: #456345;
+  color :brown;
+  padding: 14px;
+    -webkit-border-top-left-radius: 10px;
+    -webkit-border-top-right-radius: 10px;
+    -webkit-border-bottom-left-radius: 10px;
+    -webkit-border-bottom-right-radius: 10px;
+    -moz-border-radius-topleft: 10px;
+    -moz-border-radius-topright: 10px;
+    -moz-border-radius-bottomleft: 10px;
+    -moz-border-radius-bottomright: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 0 0 8px rgba(0,0,0, 0.5);
+    -moz-box-shadow: 0 0 8px rgba(0,0,0, 0.5);
+    -webkit-box-shadow: 0 0 8px rgba(0,0,0,0.5);
+   }
+
+#navigation ul {margin: 0px; padding: 0px; 
+	list-style-type: none; list-style-image: none; }
+#navigation li {display: inline; width:184px; }
+#navigation ul li A {text-decoration:line-through; padding: .2em 1em;  margin: 4px;
+	padding: 5px 5px 5px 5px; color: #897756;
+	background: #345466; ;
+	}
+#navigation ul li A:link {background: none; text-decoration: none}
+#navigation ul li A:visited {background: none; text-decoration: none}
+#navigation ul li A:active {background: none; text-decoration: none}
+#navigation ul li A:hover {text-decoration:underline; color: #567456;
+    font-weight:bold; background: none;}
+	
+
+
+A:link {background: none; text-decoration: none}
+A:visited {background: none; text-decoration: none}
+A:active {background: none; text-decoration: none}
+A:hover {text-decoration:underline; background: none; font-weight:bold; color: #567456;}
+
+
+#header {
+	background: #345466;
+	font: bold italic normal 230% 'Times New Roman', Times, serif;
+	
+	padding: 0px 10px 15px 60px;
+	height:100px auto;
+}
+
+#content {
+
+   
+   background: white;
+   font: italic normal 130% 'Times New Roman', Times, serif;	
+  
+   padding: 15px 10px 15px 10px;
+   height:800px auto;
+    }
+
+
+
+#footer {
+   width: 1000px auto;
+   background:#645543;
+   font: italic blue normal 100% 'Times New Roman', Times, serif;	
+   margin: 0;
+   padding: 15px 10px 15px 60px;
+   color:black;
+}
+
+  
+#hd-wp {
+font: italic blue normal 100% 'Times New Roman', Times, serif;
+margin: 0;
+
+width:100%;
+background: teal;
+
+} 

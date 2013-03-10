@@ -1,0 +1,26 @@
+{% include 'header.html' %}
+<nav id="content">
+<h1><font color="purple" size ="11"><b><u>CONTACT US</u></b></font></h1>
+<font size= "6">
+<p>All the viewers and readers,if you have any kind of gueries regarding post,suggestion,
+ advertisement and feedback om my blog Manojmantra,feel free to call me on <u><b><font color="black">+91 9933622166</font></b></u>
+<p>or do drop an email and put <font color="black">'smartdude.m69@gmail.com'</font> in your e-mail address.</p>
+</font>
+<br>
+{% if form.errors %}
+<p style="color: red;">
+Please correct the error{{ form.errors|pluralize }} below.
+</p>
+{% endif %}
+
+<form action="" method="post">
+{% csrf_token %}
+<table>
+{{ form.as_table }}
+</table>
+<br>
+<input type="submit" value="Submit">
+<br><br>
+</form> 
+</nav>
+{% include 'footer.html' %}

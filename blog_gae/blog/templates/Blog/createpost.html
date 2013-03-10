@@ -1,0 +1,19 @@
+{% include 'hrd.html' %}
+<nav id="content">
+{% block content %}
+
+    <form action="{% url blog.views.create_post %}" method="post" accept-charset="utf-8">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <p><input type="submit" value="Post"/></p>
+    </form>
+
+<br>
+<br><br>
+<br><br>
+<br><br>
+<br>
+
+{% endblock %}
+</nav>
+{% include 'footer.html' %}
