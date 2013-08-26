@@ -3,6 +3,8 @@ from django.db import models
 class Author(models.Model):
     name = models.CharField(max_length=64)
     email = models.CharField(max_length=64)
+    def __unicode__(self):
+         return self.name
 
  
 class Post(models.Model):
@@ -11,6 +13,8 @@ class Post(models.Model):
     author = models.ForeignKey(Author)
     body = models.TextField()
     slug = models.SlugField(max_length=40, unique=True)
+    def __unicode__(self):
+         return self.title
 
 class Comment(models.Model):
     created = models.DateTimeField(auto_now_add=True)
