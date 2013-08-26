@@ -1,15 +1,15 @@
 {% include 'header.html' %}
 <div class="container" id="content" >
-    <h1><font color="purple" size = "11"><b><u>Blog</u></b></font></h1>
+    <h1><font color="purple" size = "11"><b><u><a href = "/">Blog</a></u></b></font></h1>
     <hr />
  <div class="main">
  <ul>
     {% for post in posts.object_list %}
         <div class="post">
-        <div class="title"><h2>{{ post.title }}</h2></div>
-        <h3>Written by {{ post.author.name }} on {{post.date}}</h3>
-        <p>{{ post.body|linebreaks }}</p>
-        
+     <div class="title"><h2><a href="{% url blog.views.post post.pk %}">{{ post.title }}</a></h2></div>
+        <p>Written by {{ post.author.name }} on {{post.date}}</p>
+        <h4>{{ post.body|linebreaks }}</h4>
+
         </div>
 <div class="commentlink"><a href="{% url blog.views.post post.pk %}">Comments ({{ post.comment_set.count }})</a></div>
 <hr />
