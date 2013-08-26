@@ -1,8 +1,8 @@
 {% include 'head.html' %}
 <div class="container" id="content" >
-<div class="title"><font size="10"><b><u>{{ post.title }}</u></b></font></div>
- <h3>{{post.date}}</h3>
- <p>{{ post.body }}</p>     
+<div class="title"><h2><b><u><a href="{% url blog.views.post post.pk %}">{{ post.title }}</a></u></b></h2></div>
+ <p>{{post.date}}</p>
+ <h4>{{ post.body }}</h4>    
 <hr/>
 {% if comments %}
     <p><font size ="6" color = "red"><u>Comments:</u></font></p>
